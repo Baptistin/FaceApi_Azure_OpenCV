@@ -108,9 +108,6 @@ def launch_process():
                 records.append(json_object)
                 jsonString = json.dumps(records)
                 ### Connexion webservice Vitrine ###
-                connection_vitrine = httplib.HTTPSConnection('localhost:8080',context=context)
-                connection_vitrine.request("POST", "/faceapi", jsonString, headers=headers_vitrine)
-                connection_vitrine.close()
                 filter_count = 0
                 last_apicall_face_count = len(faces)
             else:
